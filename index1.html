@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">CRM Dashboard</div>
+            <nav class="nav-menu">
+                <div class="nav-section">
+                    <div class="nav-section-title">Main</div>
+                    <div class="nav-item active">📊 Profile</div>
+                    <div class="nav-item">📈 Support</div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Tools</div>
+                    <div class="nav-item">📞 Channels</div>
+                    <div class="nav-item">📧 Email</div>
+                    <div class="nav-item">📱 Phone List</div>
+                    <div class="nav-item">📝 Sales Data</div>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Tickets Status</div>
+                    <div class="nav-item">✨ Created</div>
+                    <div class="nav-item">🔄 Open</div>
+                    <div class="nav-item">⏳ Responded</div>
+                    <div class="nav-item">✅ Solved</div>
+                    <div class="nav-item">❌ Closed</div>
+                    <div class="nav-item">⏰ Expired</div>
+                </div>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="metric-card" style="background: linear-gradient(45deg, #b759ff, #9747ff)">
+                <div class="metric-header">
+                    <div class="metric-title">Avg First Reply Time</div>
+                </div>
+                <div class="metric-value">30<span>:15</span></div>
+            </div>
+            <div class="metric-card" style="background: linear-gradient(45deg, #45e3ff, #4f9afa)">
+                <div class="metric-header">
+                    <div class="metric-title">Avg Full Resolve Time</div>
+                </div>
+                <div class="metric-value">22<span>:40</span></div>
+            </div>
+            <div class="metric-card large">
+                <div class="metric-header">
+                    <div class="metric-title">Tickets Created vs Tickets Solved</div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">Tickets By Type</div>
+                </div>
+                <div class="donut-chart">
+                    <canvas id="typeDonutChart"></canvas>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">New Tickets vs Returned Tickets</div>
+                </div>
+                <div class="donut-chart">
+                    <canvas id="returnedDonutChart"></canvas>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">First Reply and Full Resolve Time</div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="areaChart"></canvas>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-header">
+                    <div class="metric-title">Number of Tickets / Work Day</div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
